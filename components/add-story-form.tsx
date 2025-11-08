@@ -129,7 +129,7 @@ export function AddStoryForm({
 
       <Label>Latitude & Longitude</Label>
       {!newCoords ? (
-        <p>Click on the map to set the location</p>
+        <p>First activate pin then, click on the map to set the location</p>
       ) : (
         <p>
           Latitude: <span className="text-red-500">{newCoords.lat}</span>

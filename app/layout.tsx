@@ -10,7 +10,7 @@ const defaultUrl = process.env.VERCEL_URL
 
 export const metadata: Metadata = {
   metadataBase: new URL(defaultUrl),
-  title: "Mapory",
+  title: "Mapory - Pin your memories",
   description: "Pin your memories, share your journey — Mapory turns travel stories into an interactive map experience."
 };
 
