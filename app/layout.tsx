@@ -11,7 +11,8 @@ const defaultUrl = process.env.VERCEL_URL
 export const metadata: Metadata = {
   metadataBase: new URL(defaultUrl),
   title: "Mapory - Pin your memories",
-  description: "Pin your memories, share your journey — Mapory turns travel stories into an interactive map experience."
+  description:
+    "Pin your memories, share your journey — Mapory turns travel stories into an interactive map experience.",
 };
 
 const geistSans = Geist({
@@ -34,9 +35,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="fixed bottom-8 right-4 z-[9999]">
-            <AuthButton />
-          </div>
+          <AuthButton />
           {children}
         </ThemeProvider>
       </body>

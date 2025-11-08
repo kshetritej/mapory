@@ -9,6 +9,7 @@ import { Textarea } from "./ui/textarea";
 import { Label } from "./ui/label";
 import { Button } from "./ui/button";
 import { LucideX } from "lucide-react";
+import { AuthButton } from "./auth-button";
 
 export function AddStoryForm({
   user,

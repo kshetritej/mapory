@@ -7,6 +7,7 @@ import { AddStoryForm } from "@/components/add-story-form";
 import { User } from "@supabase/supabase-js";
 import { Button } from "@/components/ui/button";
 import { LucideMenu } from "lucide-react";
+import { AuthButton } from "@/components/auth-button";
 
 // Dynamically import react-leaflet and leaflet so they only run on client side
 const MapContainer = dynamic(
@@ -109,7 +110,7 @@ export default function MaporyMap() {
     <div className="flex h-screen">
       {newCoords?.lat && newCoords.lng && (
         <Button
-          className="fixed bottom-8 right-8 z-[9999]"
+          className="fixed bottom-8 right-8 z-[999]"
           onClick={() => setNewCoords({ lat: null, lng: null })}
         >
           Clear Coordinates
@@ -132,8 +133,8 @@ export default function MaporyMap() {
           <Button
             disabled={!user}
             title="Login or signup to add your mapory!"
+            className="fixed top-4 left-4"
             onClick={() => setShow(true)}
-            className="m-4 fixed top-4 left-8 z-[9999]"
             variant={"outline"}
           >
             <LucideMenu />
@@ -166,7 +167,7 @@ export default function MaporyMap() {
                   />
                 )}
                 <p>{story.message}</p>
-                <p>{user?.email}</p>
+                <p>{"Anon."}</p>
               </Popup>
             </Marker>
           ))}
