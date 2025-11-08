@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import "./globals.css";
+import { AuthButton } from "@/components/auth-button";
 
 const defaultUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
@@ -9,8 +10,8 @@ const defaultUrl = process.env.VERCEL_URL
 
 export const metadata: Metadata = {
   metadataBase: new URL(defaultUrl),
-  title: "Next.js and Supabase Starter Kit",
-  description: "The fastest way to build apps with Next.js and Supabase",
+  title: "Mapory",
+  description: "Pin your memories, share your journey — Mapory turns travel stories into an interactive map experience."
 };
 
 const geistSans = Geist({
@@ -33,6 +34,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <div className="fixed bottom-8 right-4 z-[9999]">
+            <AuthButton />
+          </div>
           {children}
         </ThemeProvider>
       </body>
